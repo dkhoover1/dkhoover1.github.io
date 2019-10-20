@@ -15,5 +15,5 @@ RUN npm install
 
 #deploy to NGINX
 FROM nginx
-COPY --from=builder ./usr/local/app/app /etc/nginx/html/helloworld/
+COPY --from=builder ./usr/local/app /etc/nginx/html/helloworld/
 COPY --from=builder ./usr/local/app/nginx.conf /etc/nginx/conf.d/default.conf
